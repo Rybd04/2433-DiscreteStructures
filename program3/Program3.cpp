@@ -20,19 +20,24 @@ void openFiles(ifstream& infile, ofstream& outfile);
 void printHeader(ofstream& outfile);
 
 // Purpose: Fills in the matrix using the boundary fill algorithm
-// Requires: starting x and y coordinates, current level, matrix, number of rows and columns
+// Requires: starting x and y coordinates, current level, 
+// matrix, number of rows and columns
 // Returns: n/a
-void boundaryFill(int x, int y, int level, int** matrix, int rows, int cols);
+void boundaryFill(int x, int y, int level, int** matrix, 
+    int rows, int cols);
 
 // Purpose: Creates a matrix from the input file
 // Requires: input file stream, number of rows and columns
 // Returns: pointer to the created matrix
 int** createMatrix(ifstream& infile, int rows, int cols);
 
-// Purpose: Gets the values for rows, columns, and starting coordinates from the input file
-// Requires: input file stream, output file stream, references to rows, columns, xStart, and yStart
+// Purpose: Gets the values for rows, columns, 
+// and starting coordinates from the input file
+// Requires: input file stream, output file stream, references to rows,
+// columns, xStart, and yStart
 // Returns: n/a
-void getValues(ifstream& infile, ofstream& outfile, int& rows, int& cols, int& xStart, int& yStart);
+void getValues(ifstream& infile, ofstream& outfile, int& rows, 
+    int& cols, int& xStart, int& yStart);
 
 // Purpose: Gets the number of matrices to process from the input file
 // Requires: input file stream, output file stream
@@ -111,7 +116,8 @@ int matrixNum(ifstream& infile, ofstream& outfile)
 }
 
 // Gets values for rows, columns, and starting coordinates
-void getValues(ifstream& infile, ofstream& outfile, int& rows, int& cols, int& xStart, int& yStart)
+void getValues(ifstream& infile, ofstream& outfile, int& rows, 
+    int& cols, int& xStart, int& yStart)
 {
     infile >> rows;
     infile >> cols;
@@ -140,7 +146,8 @@ int** createMatrix(ifstream& infile, int rows, int cols)
 }
 
 // Boundary fill algorithm
-void boundaryFill(int x, int y, int level, int** matrix, int rows, int cols)
+void boundaryFill(int x, int y, int level, int** matrix, 
+    int rows, int cols)
 {
 
     // Base Cases
