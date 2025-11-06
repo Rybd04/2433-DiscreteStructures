@@ -76,7 +76,10 @@ int main()
 
         // Print matrix to console
         printMatrix(matrix, rows, cols, outfile);
-        }
+    }
+    
+    infile.close();
+    outfile.close();
 }
 
 // Opens input and output files
